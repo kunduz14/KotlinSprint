@@ -2,9 +2,9 @@ package org.example.lesson_3
 
 fun main() {
     val send = "D2-D4;0"
-    val whereFrom = send.slice(0..1)
-    val where = send.subSequence(3,5)
-    val moveNumber = send.drop(6)
+    val whereFrom = send.split('-', ';') [0]
+    val where = send.split('-', ';') [1]
+    val moveNumber = send.split('-', ';') [2]
 
     println(whereFrom)
     println(where)
