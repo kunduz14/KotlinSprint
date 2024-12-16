@@ -2,27 +2,23 @@ package org.example.lesson_4
 
 fun main() {
     val day = 5
-    val exercisesForHands: Boolean
-    val exercisesForPress: Boolean
-    val exercisesForLegs: Boolean
-    val exercisesForBacks: Boolean
+    val isEvenDay = day % 2 == 0
 
-    if (day % 2 != 0) {
-        exercisesForHands = true
-        exercisesForPress = true
-        exercisesForLegs = false
-        exercisesForBacks = false
+    if (isEvenDay == true) {
+        println("""
+            Упражнения для рук:    false
+            Упражнения для ног:    true
+            Упражнения для спины:  true
+            Упражнения для пресса: false
+        """.trimIndent()
+        )
     } else {
-        exercisesForHands = false
-        exercisesForPress = false
-        exercisesForLegs = true
-        exercisesForBacks = true
+        println("""
+            Упражнения для рук:    true
+            Упражнения для ног:    false
+            Упражнения для спины:  false
+            Упражнения для пресса: true
+        """.trimIndent()
+        )
     }
-
-    println("""
-        Упражнения для рук:       $exercisesForHands
-        Упражнения для ног:       $exercisesForLegs
-        Упражнения для спины:  $exercisesForBacks
-        Упражнения для пресса: $exercisesForPress
-    """.trimIndent())
 }
